@@ -1,0 +1,84 @@
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="An animated pieces effect for images with many possibilities" />
+		<meta name="keywords" content="animation, piece, fragment, box, css, javascript, demo, effect, web dev" />
+        <title>Dawid Bator</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo-entry.css" />
+		<script>document.documentElement.className = 'js';</script>
+  
+</head>
+<body>
+<div class="demo-grid">   
+<div id="console">
+  <header>
+      <p>admin@bathordyktator <a href="index.html"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20"></a></p> 
+  </header>    
+<div id="consolebody"></div>
+</div>  
+</div>     
+    <script>
+        
+// set up text to print, each item in array is new line
+var aText = new Array(
+"Cześć,", 
+"nazywam się <span id=\"name\">Dawid Bator</span>",
+"w tym roku ukończyłem studia pierwszego stopnia z Informatyki Stosowanej. Obecnie jestem nieszczęśliwym bezrobotnym i szukam pracy jako...",
+"Junior frontend deweloper lub Junior webdeweloper",
+"Mieszkam w Starym Sączu (małe miasteczko obok Nowego Sącza)",
+"Jestem otwarty na pracę w większych miastach.",
+"Oglądam mnóstwo filmów i seriali",
+"Lubię pograć w gierki. Czasem, aż za dużo.",
+"Chodzę sobie po górach.",
+"Staram się zostać programistą, który wie co robi. Niestety aktualnie jestem tylko dobrym operatorem wyszukiwarki google\'a.",
+"\"Not sure if i\'m a good junior programmer",
+"or just good at googling\"",
+"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić.",
+" <a href=\"projects.html\">Sprawdź moje projekty ></a>"
+
+);
+var iSpeed = 30; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("consolebody");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+
+typewriter();
+    
+    </script>
+</body>
+<html>
+    
+    
+    
+
+	

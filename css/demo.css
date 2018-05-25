@@ -1,0 +1,283 @@
+/********************************* NORMALIZE **********************************/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
+/*****************************************************************************/
+
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	--body-text: #f1d51d;
+	--body-text-alt: #525252;
+	--link-text: #6d6d6d;
+	--link-text-hover: #fff;
+	--content-title-text: #000;
+	--content-subtitle-text: #f1d51d;
+	--highlight-text: #ffc712;
+	font-family: 'Lato', sans-serif;
+	color: #f1d51d;
+	color: var(--body-text);
+	background: #000;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #6d6d6d;
+	color: var(--link-text);
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	outline: none;
+	color: #fff;
+	color: var(--link-text-hover);
+}
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+.message {
+	background: #333;
+	background: var(--body-text);
+	color: #ccd8e4;
+	color: var(--body-bg);
+	text-align: center;
+	padding: 1em;
+	display: none;
+}
+
+/* Icons */
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+
+/* Frame */
+.frame {
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 100;
+	display: -ms-grid;
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	pointer-events: none;
+	padding: 2em;
+	-ms-grid-columns: 50% 50%;
+	grid-template-columns: 50% 50%;
+	-ms-grid-rows: auto auto 4em;
+	grid-template-rows: auto auto 4em;
+	grid-template-areas: 	"... header"
+							"... header"
+							"... demos";
+}
+
+.no-js .frame {
+	position: relative;
+	display: block;
+	height: auto;
+}
+
+.frame a {
+	pointer-events: auto;
+}
+
+.frame__title {
+	font-family: var(--content-font);
+	margin: 0;
+	font-size: 2em;
+	justify-self: start;
+}
+
+/* Header */
+.codrops-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	grid-area: header;
+	-ms-flex-item-align: start;
+	align-self: start;
+	justify-self: end;
+}
+
+.codrops-header__title {
+	font-size: 1em;
+	opacity: 0;
+	margin: 1em 0 0;
+	font-weight: normal;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+
+/* Top Navigation Style */
+.codrops-links {
+	position: relative;
+}
+
+.codrops-icon {
+	display: block;
+	margin: 0.25em 0;
+	padding: 0.25em 0;
+}
+
+/* Demo links */
+.demos {
+	grid-area: demos;
+	-ms-flex-item-align: end;
+	align-self: end;
+	justify-self: end;
+	margin: 0 0 0 auto;
+}
+
+.demo {
+	display: inline-block;
+	margin: 0 0 0 1em;
+	padding: 0 0 0.25em;
+	white-space: nowrap;
+	border-bottom: 2px solid transparent;
+}
+
+.demo--current {
+	border-color: currentColor;
+}
+
+.pieces {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+@media screen and (max-width: 40em) {
+	.message {
+		display: block;
+	}
+	.frame {
+		display: block;
+		height: auto;
+		position: relative;
+		text-align: center;
+		z-index: 10000;
+	}
+	.codrops-header {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.codrops-header__title {
+		padding: 1em 0;
+		opacity: 1;
+		-webkit-writing-mode: horizontal-tb;
+    	-ms-writing-mode: lr-tb;
+    	writing-mode: horizontal-tb;
+	}
+	.codrops-icon {
+		display: inline-block;
+		margin: 0.25em;
+		padding: 0.25em;
+	}
+	.demos {
+		padding: 1em 0 0;
+	}
+	.demo {
+		margin: 0 0.5em 0.5em;
+	}
+}
+
+/********************************* about.html **********************************/
+#console{
+    width: 600px;
+    border: 10px solid #555;
+    border-top:none;
+    height: 600px;
+    margin: 25px auto;
+    font-family: 'Fira Mono', monospace;
+    color: #63de00;
+    background: #000;
+}
+
+#console header{
+    background-color: #555;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+}
+    
+#console header a{
+    float:right;
+    margin-top: 8px;
+    margin-right: 6px;
+}
+
+#name{color: darkgreen;}
+
+/*******************************************************************************/
+
+/******************************* projects.html *********************************/
+
+/* STYL DO NAVKI TOP */
+.container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+nav{ padding: 3px; }
+
+ul{
+    list-style: none;
+    --link-text: #fff;
+    padding: 0px;
+}  
+
+li{ display: inline-block; }
+       
+.right{ float: right;}
+
+
+
+
+/*******************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
