@@ -10,8 +10,20 @@
         <title>Dawid Bator</title>
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+        
+        <style>
+            .block img{
+                width: 200px;
+                height: 200px;
+            }
+        
+        
+        </style>
+        
+        
+        
 	</head>
     
 	<body onload="startTime()">
@@ -40,10 +52,7 @@
             <div class="kontakty">   
                 <header>
                     <p>Kontakt <a href="#"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20" onclick="hideCont()"></a></p> 
-                </header>    
-                <h1>KONTAKT</h1>
-                <li>dawid.bathor@gmail.com</li>
-                <li>666-666-666</li>
+                </header>               
 
                 <div id="containerx">
                     <div class="block"><a href="#"><i class="ion-social-github"></i></a></div>
@@ -51,17 +60,20 @@
                     <div class="block"><a href="#"><i class="ion-social-facebook"></i></a></div>
                     <div class="block"><a href="#"><i class="ion-social-googleplus"></i></a></div>
                 </div>
+  
             </div>     
         </div>         
         
     
         
         <div id="projectWindow" style="display:none">        
-            <div id="all">
+            <div id="projects">
                 <header>
                     <p>Projekty <a href="#"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20" onclick="hideProj()"></a></p> 
                 </header>     
-
+                
+        
+                <div id="proj-hold">
                 <div class="view view-tenth">
                     <img src="img/03.jpg" alt="img03"/>
                     <div class="mask">
@@ -96,11 +108,11 @@
                         <p>Strona zakodowana w trakcie stażu. Branża ogrodzeniowa.</p>
                         <a href="http://www.ogrodzenia-karpaty.pl/" class="info">Przejdź</a>
                     </div>
-                    
+                </div>  
+
                 </div>
-            </div>          
-        </div>       
-        
+            </div>
+        </div>
         
         <canvas id="snake" width="608" height="608"></canvas>   
        

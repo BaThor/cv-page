@@ -51,9 +51,7 @@ var aText = new Array(
 "Staram się zostać programistą, który wie co robi. Niestety aktualnie jestem tylko dobrym operatorem wyszukiwarki google\'a.",
 "\"Not sure if i\'m a good junior programmer",
 "or just good at googling\"",
-"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić.",
-" <a href=\"projects.html\">Sprawdź moje projekty ></a>"
-
+"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić."
 );
 var iSpeed = 30; // time delay of print out
 var iIndex = 0; // start printing array at this posision
