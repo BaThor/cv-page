@@ -12,14 +12,21 @@
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-        
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120072765-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120072765-1');
+</script>   
         <style>
             .block img{
                 width: 200px;
                 height: 200px;
             }
-        
-        
+    
         </style>
         
         
@@ -27,53 +34,63 @@
 	</head>
     
 	<body onload="startTime()">
-        <div class="message" color="#000">Odpal strone na komputerze lub urzadzeniu o większej rozdzielczości bo lipa.</div>   
+        <div class="message" color="#000">Odpal strone na komputerze lub urzadzeniu o większej rozdzielczości.</div> 
         
-        <div class="folder"><a href="#" onclick="showDiv()"><i class="ion-android-folder-open"></i></a></div>
-        <div class="folder"><a href="#" onclick="showCont()"><i class="ion-ios-email"></i></a></div>
-        <div class="folder"><a href="#" onclick="showProj()"><i class="ion-filing"></i></a></div>
+
+        
+        <div class="folder"><a href="#" onclick="showDiv()"><img src="img/cmd.png" alt="icon about me"></a><p>O mnie</p></div>
+        <div class="folder"><a href="#" onclick="showCont()"><img src="img/contact.png" alt="icon contact"></a><p>Kontakt</p></div>
+        <div class="folder"><a href="#" onclick="showProj()"><img src="img/work.png" alt="icon about me"></a><p>Projekty</p></div>
+        <div class="folder"><a href="pdf/cv_dawid_bator.pdf" ><img src="img/pdf.png" alt="icon about me"></a><p>CV</p></div>
+        <div class="folder"><a href="pdf/cv_dawid_bator1.pdf" ><img src="img/pdf.png" alt="icon about me"></a><p>Resume</p></div>         
+        <!--
         <div class="folder"><a href="#" onclick="myFunction()"><i class="ion-steam"></i></a></div> 
-        
+        -->
            
         
-        
-        <div id="demo-grid" style="display:none;">   
-            <div id="console">
-                <header>
-                    <p>admin@bathordyktator <a href="#"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20" onclick="hideDiv()"></a></p> 
-                </header>    
-                <div id="consolebody"></div>
-            </div>  
-        </div> 
-        
-        
-        
-        <div id="containeryyy" style="display:none;">  
-            <div class="kontakty">   
-                <header>
-                    <p>Kontakt <a href="#"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20" onclick="hideCont()"></a></p> 
-                </header>               
-
-                <div id="containerx">
-                    <div class="block"><a href="#"><i class="ion-social-github"></i></a></div>
-                    <div class="block"><a href="#"><i class="ion-social-linkedin"></i></a></div>
-                    <div class="block"><a href="#"><i class="ion-social-facebook"></i></a></div>
-                    <div class="block"><a href="#"><i class="ion-social-googleplus"></i></a></div>
+        <div id="aboutMe" style="display:none;">
+            <div class="toolbar">
+                <div class="title">
+                    <img src="img/cmd.png" alt="icon about me">
                 </div>
-  
-            </div>     
-        </div>         
+                <span>Wiersz polecenia</span>
+                <a href="#" class="buttonSmall">X</a>
+            </div>
+            <div id="content"></div>
+        </div>
         
-    
-        
-        <div id="projectWindow" style="display:none">        
-            <div id="projects">
-                <header>
-                    <p>Projekty <a href="#"><img border="0" alt="Cofnij" src="img/cancel.png" width="20" height="20" onclick="hideProj()"></a></p> 
-                </header>     
-                
-        
-                <div id="proj-hold">
+        <div id="contact" style="display:none;">
+            <div class="toolbar">
+                <div class="title">
+                    <img src="img/contact.png" alt="icon about me">
+                </div>                
+                <span>Kontakt -- Notatnik</span>
+                <a href="#" class="buttonSmall">X</a>
+            </div>
+            <div id="contentx">
+                <textarea id="edit"> Witaj! Szukam pracy lub stażu jako junior front end developer. Jeżeli nie masz dla mnie żadnej oferty to mimo wszystko zaproś mnie na moim profilu LinkedIn. Chcę zbudować własną sieć kontaktów, która pomoże mi w znalezieniu pierwszej pracy :) 
+=================================================
+                dawid.bathor@gmail.com
+                660 019 366
+                https://github.com/BaThor
+                https://www.linkedin.com/in/dawid-bator/
+                https://web.facebook.com/dawid.bator.3    
+=================================================                    
+                    
+                </textarea>
+            </div>
+        </div>        
+          
+        <div id="myProjects"  style="display:none">
+            <div class="toolbar">
+                <div class="title">
+                    <img src="img/work.png" alt="icon about me">
+                </div>    
+                <span>Moje projekty</span>
+                <a href="#" class="buttonSmall">X</a>
+            </div>
+            <div id="contentxx">
+            <div id="proj-hold">
                 <div class="view view-tenth">
                     <img src="img/03.jpg" alt="img03"/>
                     <div class="mask">
@@ -111,25 +128,67 @@
                 </div>  
 
                 </div>
+            
             </div>
         </div>
-        
-        <canvas id="snake" width="608" height="608"></canvas>   
-       
-        
-        <footer>
-            <div class="left">
-                <i class="ion-social-windows">     
-                </i>    
-            </div>
 
-            <div class="right"><p id="czas"></p></div>
-        </footer>       
-              
+        <div id="game" style="display:none">
+            <div class="toolbar">
+                <div class="title">
+                    <img src="img/cmd.png" alt="icon about me">
+                </div>
+                <span>Wiersz polecenia</span>
+                <a href="#" class="buttonSmall">X</a>
+            </div>
+            <canvas id="snake" width="608" height="608"></canvas> 
+        </div>
+  
+   
+
+        <div class="start-wrapper">
+            <div class="startbar">
+                <div class="start">
+                    <i class="ion-social-windows"></i>
+                    <div class="start-content">
+                        <a href="#" onclick="myFunction()"><img src="img/cobra.png" alt="icon about me">Dzika Cobra 3</a>
+                        <a href="#" onclick="shutDown()"><img src="img/shutdown.png" alt="icon about me">Zamknij</a>
+                    </div>
+                </div>
+                <div class="programs">
+                <!-- soon  hope so -->
+                </div>
+                <div id="clock"></div>
+            </div>
+        </div>      
+        
+        <div id="shutDownPage" style="display:none">
+            <img src="img/bye.png" alt="bye">
+        </div>
+        
+        
         
         <script src="js/main.js"></script>  
         <script src="js/kobra.js"></script>      
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         
+ <script>
+  $( function() {
+    $( "#aboutMe, #contact, #myProjects, #game" ).draggable();
+  } );
+        
+     
+$(document).ready(function(){
+    $(".hide,.buttonSmall").click(function(){
+        $("#aboutMe, #contact, #myProjects, #game").hide();
+    });
+    $("#show").click(function(){
+        $("#myProjects").show();
+    });
+});     
+
+
+  </script>
         
 	</body>
 </html>

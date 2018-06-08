@@ -1,36 +1,37 @@
 /*show/hide folders and cobra */
 
 function showDiv(){
-    document.getElementById('demo-grid').style.display = "block";
+    document.getElementById('aboutMe').style.display = "block";
     typewriter();
 }        
-function hideDiv(){
-    document.getElementById('demo-grid').style.display = "none";
-}       
+   
       
         
 function showCont(){
-    document.getElementById('containeryyy').style.display = "block";
+    document.getElementById("contact").style.display = "block";
 }           
-function hideCont(){
-    document.getElementById('containeryyy').style.display = "none";
-}    
-        
+  
+
 function showProj(){
-    document.getElementById('projectWindow').style.display = "block";
+    document.getElementById('myProjects').style.display = "block";
 }           
-function hideProj(){
-    document.getElementById('projectWindow').style.display = "none";
-}
+
 
 function myFunction() {
-    var x = document.getElementById("snake");
+    var x = document.getElementById("game");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
         x.style.display = "none";
     }
 } 
+
+
+function shutDown(){
+    document.getElementById('shutDownPage').style.display = "block";
+} 
+
+
 
 
 
@@ -51,7 +52,8 @@ var aText = new Array(
 "Staram się zostać programistą, który wie co robi. Niestety aktualnie jestem tylko dobrym operatorem wyszukiwarki google\'a.",
 "\"Not sure if i\'m a good junior programmer",
 "or just good at googling\"",
-"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić."
+"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić.",
+"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić."    
 );
 var iSpeed = 30; // time delay of print out
 var iIndex = 0; // start printing array at this posision
@@ -66,7 +68,7 @@ function typewriter()
 {
  sContents =  ' ';
  iRow = Math.max(0, iIndex-iScrollAt);
- var destination = document.getElementById("consolebody");
+ var destination = document.getElementById("content");
  
  while ( iRow < iIndex ) {
   sContents += aText[iRow++] + '<br />';
@@ -83,8 +85,6 @@ function typewriter()
   setTimeout("typewriter()", iSpeed);
  }
 }
-
-
 
 
 
@@ -109,7 +109,7 @@ if(mm<10)
 } 
     m = checkTime(m);
 
-    document.getElementById('czas').innerHTML = 
+    document.getElementById('clock').innerHTML = 
         h + ':' + m +'</br>'+ yyyy+'-'+mm+'-'+dd; ;
     var t = setTimeout(startTime, 500);
     
