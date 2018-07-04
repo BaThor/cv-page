@@ -9,7 +9,10 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 /*****************************************************************************/
 /*****************************************************************************/
 html{
-    overflow-y:;
+ 	font-family: 'Lato', sans-serif;
+	color: #f1d51d;
+	background-color: #000;
+	font-size: 14px;
 }
 *,
 *::after,
@@ -25,18 +28,6 @@ ul{
 
 li{ display: inline-block; }
 
-body {
-	font-family: 'Lato', sans-serif;
-	color: #f1d51d;
-	background: #000;
-	font-size: 14px;
-	overflow-x: hidden;
-    background: url("../img/kosmos.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 0% 10%; 
-    background-size: cover;    
-}
 
 a {
 	text-decoration: none;
@@ -58,6 +49,17 @@ a:focus {
 	pointer-events: none;
 }
 
+body{
+    height: 100vh;
+}
+.wrapper{
+    overflow-x: hidden;
+    background: url("../img/kosmos.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+}
 
 /*****************************************************************************/
 /**************************** FOLDDERY/NAWIGACJA *****************************/
@@ -109,23 +111,9 @@ a:focus {
 }
 
 /*****************************************************************************/
-/********************************* O MNIE ************************************/
+/********************************* TOOLBAR ***********************************/
 /*****************************************************************************/
 
-#aboutMe{
-    width: 710px;
-    height: auto;
-    border: 10px solid #878787;
-    background: #111;
-    position: absolute;    
-}
-
-#content{
-    overflow-y:scroll;
-    width: 100%;
-    height: 450px;
-    font-size: 14px;
-}
 .toolbar{
     padding: 0px 7px 7px;
     position: relative;
@@ -167,7 +155,28 @@ a:focus {
     padding: 4px 19px;
     background: #d22e2e;
     text-align: center;
-}    
+}  
+
+
+/*****************************************************************************/
+/********************************* O MNIE ************************************/
+/*****************************************************************************/
+
+#aboutMe{
+    width: 710px;
+    height: auto;
+    border: 10px solid #878787;
+    background: #111;
+    position: absolute;    
+}
+
+#content{
+    overflow-y:scroll;
+    width: 100%;
+    height: 450px;
+    font-size: 14px;
+}
+  
 
 /*****************************************************************************/
 /********************************* KONTAKT ***********************************/
@@ -184,8 +193,7 @@ a:focus {
     width: 100%;
     height: 400px;
     font-size: 14px;
-    color: #111;
-    
+    color: #111; 
 }
 
 #edit {
@@ -194,72 +202,6 @@ a:focus {
     resize: none;
     background-color: #fff;     
     overflow-y:scroll;    
-}
-
-.block {
-    width: 130px;
-    height: 130px;
-    margin: 10px;
-    display: inline-block;
-    background: #151515;
-    font-size: 110px;
-    border-radius: 10px;
-    text-align: center;
-
-}
-
-.block:hover {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-        -webkit-transition-duration: 1s;
-        transition-duration: 1s;
-}
-
-.ion-social-facebook {
-    color: #3B5998;
-}    
-  
-.ion-social-linkedin {
-    color: #0077B5;
-}   
-        
-.ion-social-googleplus {
-    color: #D62D20;
-    }   
-
-.ion-social-github {
-    color: #fff /*#0d2636*/;
-}        
-        
-        
-h2 {
-    color: #fff;
-    text-align: center;
-}
-        
-.kontakty {
-    background: #1c1c1cad;
-    width:600px;
-    margin: 0 auto;
-    border: 5px solid #000;
-}  
-
-   
-.kontakty header {
-    background: #000;
-    line-height: 35px;
-    height: 35px;
-
-}
-        
-.kontakty header a {
-    float: right;
-    margin-top: 4px;
-    margin-right: 6px;
-}
-
-.kontakty header p{
-    margin: 0px;
 }
 
 /*****************************************************************************/
@@ -279,43 +221,6 @@ h2 {
     font-size: 14px;
     color: #111;
     overflow-y:scroll;    
-}
-
-
-
-
-
-
-
-#projectWindow{
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0px;
-    right: 0px;
-    text-align: center;
-}    
-
-#projects{
-    background: #1c1c1cad;
-    width:760px;
-    margin: 0 auto;
-    border: 5px solid #000;
-}
-
-#projects p {
-    margin: 0px;
-}
-#projects header {
-    background: #000;
-    line-height: 35px;
-    height: 35px;
-}
-
-#projects header a {
-    float: right;
-    margin-top: 4px;
-    margin-right: 6px;
 }
 
 #proj-hold{
@@ -462,29 +367,20 @@ canvas {
 }
 
 #game .toolbar{
-    width:608px;
+    width: 608px;
 }
 /*****************************************************************************/
 /********************************* FOOTER ************************************/
 /*****************************************************************************/
-        
-#demo-grid {
-    position: absolute;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0px;
-    right: 0px;
-}
-
-.startbar{
+       
+.startBar{
     display:block;
     position: fixed;
     left:0;
     bottom:0;
     width: 100%;
     background-color: rgba(109, 109, 109, 0.33);
-    padding: 0px 0 0 8px;
+    padding: 0px 0 0 0px;
     z-index: 3;
     color: #fff;
     color: #fff;
@@ -493,8 +389,8 @@ canvas {
 .start{
     float: left;
     font-size: 30px;
-    padding: 0px 5px 5px;
-    
+    padding: 0px 10px 5px;
+    width: 50px;
 }
 
 
@@ -507,8 +403,6 @@ canvas {
     padding: 3px 10px 6px;
     text-align: center;
 }
-
-
 
         
  .ion-social-windows {
@@ -548,10 +442,15 @@ canvas {
 
 .start:hover .start-content {
     display: block;
+
 }
 
-.start:hover .ion-social-windows:hover {
+.start:hover{
     background-color: #101010;
+    color: #38a8ed;
+}
+
+ .ion-social-windows:hover {
     color: #38a8ed;
 }   
 
@@ -599,6 +498,7 @@ R   R - ESPONSIVE
 */
 
 
+
  
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1024px) {
@@ -628,7 +528,7 @@ R   R - ESPONSIVE
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
     
-    .start-wrapper{
+    .startWrapper{
     display: none;
 }
     
@@ -639,9 +539,9 @@ R   R - ESPONSIVE
     .folder p{
         font-size: 14px;
     }
-.view{
-    margin: 5px;
-}    
+    .view{
+        margin: 5px;
+    }    
  
     #proj-hold{
         margin: 15px;
@@ -670,6 +570,9 @@ R   R - ESPONSIVE
         margin: 0 auto;
     }  
 
+    html{
+        min-height: 100%;
+    }
 }
  
 
@@ -679,12 +582,4 @@ R   R - ESPONSIVE
 @media only screen and (max-width: 320px) {
 
 }
-
-
-
-
-
-
-
-
 
