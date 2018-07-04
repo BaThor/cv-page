@@ -35,25 +35,26 @@ function shutDown(){
 
 
 
-
 /* TYPEWRITER */
         
 // set up text to print, each item in array is new line
 var aText = new Array(
-"Cześć,", 
-"nazywam się <span id=\"name\">Dawid Bator</span>",
-"w tym roku ukończyłem studia pierwszego stopnia z Informatyki Stosowanej. Obecnie jestem nieszczęśliwym bezrobotnym i szukam pracy jako...",
-"Junior frontend deweloper lub Junior webdeweloper",
-"Mieszkam w Starym Sączu (małe miasteczko obok Nowego Sącza)",
-"Jestem otwarty na pracę w większych miastach.",
-"Oglądam mnóstwo filmów i seriali",
-"Lubię pograć w gierki. Czasem, aż za dużo.",
-"Chodzę sobie po górach.",
-"Staram się zostać programistą, który wie co robi. Niestety aktualnie jestem tylko dobrym operatorem wyszukiwarki google\'a.",
-"\"Not sure if i\'m a good junior programmer",
+">  Cześć,", 
+">nazywam się <span id=\"name\">Dawid Bator</span>",
+">w tym roku ukończyłem studia pierwszego stopnia z Informatyki Stosowanej.",
+">Obecnie szukam pracy lub stażu jako...",
+">Junior frontend deweloper lub Junior webdeweloper",
+" ",
+">Mieszkam w Starym Sączu (małe miasteczko obok Nowego Sącza). Jestem otwarty na pracę w większych miastach.",
+">Oglądam mnóstwo filmów i seriali. Lubię pograć w gierki, czasem za dużo.",
+">Staram się zostać programistą, który wie co robi. Niestety aktualnie jestem tylko dobrym operatorem wyszukiwarki google\'a.",
+" ",    
+"\">Not sure if i\'m a good junior programmer",
 "or just good at googling\"",
-"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić.",
-"Całe moje zainteresowanie się tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka. Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami. W trakcie 4 miesięcznego stażu stworzyłem kilka stron. Z biegiem czasu nie jestem z nich dumny ponieważ, zawsze bym coś chciał zmienić."    
+" ",
+">Całe moje zainteresowanie tworzeniem stron, zaczęło się końcem drugiego roku na studiach. Przez profesora który mi to najpierw dobrze obrzydził. Z czasem tworząc kolejne projekty na zaliczenie pokochałem to i zrozumiałem, że to nie tylko kodowanie, ale w jakimś sensie sztuka.", 
+">Na 3 roku udało mi się rozpocząć staż w firmie która zajmowała się tworzeniem stron i portali internetowych. Mogłem zobaczyć jak wygląda to wszystko od środka. Bardzo się cieszyłem, gdy starsi koledzy dali mi możliwość zakodowania moich pierwszych stron. Poczułem się jak dziecko w sklepie z zabawkami.",
+">Zatrudnij Batorka na juniorka z głową pełną pomysłów! :)"
 );
 var iSpeed = 30; // time delay of print out
 var iIndex = 0; // start printing array at this posision
@@ -120,7 +121,7 @@ function checkTime(i) {
     return i;
 } 
 
-
+    
 
 
 
