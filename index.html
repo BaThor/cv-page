@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="pl" class="no-js">
     
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600&amp;subset=latin-ext" rel="stylesheet">
-		<meta name="description" content="An animated pieces effect for images with many possibilities" />
-		<meta name="keywords" content="animation, piece, fragment, box, css, javascript, demo, effect, web dev" />
+		<meta name="description" content="Portfolio page of me Dawid Bator." />
+		<meta name="keywords" content="html, css, portfolio, js, frontend, internship, staż, praca, junior, frontend, webdeveloper" />
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <title>Dawid Bator</title>
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120072765-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120072765-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-  gtag('config', 'UA-120072765-1');
-</script>   
-        <style>
-            .block img{
-                width: 200px;
-                height: 200px;
-            }
-    
-        </style>
-        
-        
-        
+          gtag('config', 'UA-120072765-1');
+        </script>    
 	</head>
     
 	<body onload="startTime()">
+        <div class="wrapper">
         <div class="message" color="#000">Odpal strone na komputerze lub urzadzeniu o większej rozdzielczości.</div> 
         
 
@@ -43,9 +33,7 @@
         <div class="folder"><a href="#" onclick="showProj()"><img src="img/work.png" alt="icon about me"></a><p>Projekty</p></div>
         <div class="folder"><a href="pdf/cv_dawid_bator.pdf" ><img src="img/pdf.png" alt="icon about me"></a><p>CV</p></div>
         <div class="folder"><a href="pdf/cv_dawid_bator1.pdf" ><img src="img/pdf.png" alt="icon about me"></a><p>Resume</p></div>         
-        <!--
-        <div class="folder"><a href="#" onclick="myFunction()"><i class="ion-steam"></i></a></div> 
-        -->
+
            
         
         <div id="aboutMe" style="display:none;">
@@ -135,9 +123,9 @@
         <div id="game" style="display:none">
             <div class="toolbar">
                 <div class="title">
-                    <img src="img/cmd.png" alt="icon about me">
+                    <img src="img/cobra.png" alt="icon about me">
                 </div>
-                <span>Wiersz polecenia</span>
+                <span>Dzika Kobra 3</span>
                 <a href="#" class="buttonSmall">X</a>
             </div>
             <canvas id="snake" width="608" height="608"></canvas> 
@@ -145,10 +133,10 @@
   
    
 
-        <div class="start-wrapper">
-            <div class="startbar">
+        <div class="startWrapper">
+            <div class="startBar">
                 <div class="start">
-                    <i class="ion-social-windows"></i>
+                    <span class="ion-social-windows"></span>
                     <div class="start-content">
                         <a href="#" onclick="myFunction()"><img src="img/cobra.png" alt="icon about me">Dzika Cobra 3</a>
                         <a href="#" onclick="shutDown()"><img src="img/shutdown.png" alt="icon about me">Zamknij</a>
@@ -156,6 +144,25 @@
                 </div>
                 <div class="programs">
                 <!-- soon  hope so -->
+                <!--
+                    <a href="#">
+                        <img src="img/cmd.png" alt="icon about me">
+                        <span>Wiersz polecenia</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/cmd.png" alt="icon about me">
+                        <span>Kontakt -- Notatnik</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/work.png" alt="icon about me">
+                        <span>Moje projekty</span>
+                    </a>
+
+                    <a href="#">
+                        <img src="img/cobra.png" alt="icon about me">
+                        <span>Dzika Kobra 3</span>
+                    </a>
+                -->
                 </div>
                 <div id="clock"></div>
             </div>
@@ -164,31 +171,29 @@
         <div id="shutDownPage" style="display:none">
             <img src="img/bye.png" alt="bye">
         </div>
-        
+      
         
         
         <script src="js/main.js"></script>  
         <script src="js/kobra.js"></script>      
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        
- <script>
-  $( function() {
-    $( "#aboutMe, #contact, #myProjects, #game" ).draggable();
-  } );
-        
-     
-$(document).ready(function(){
-    $(".hide,.buttonSmall").click(function(){
-        $("#aboutMe, #contact, #myProjects, #game").hide();
-    });
-    $("#show").click(function(){
-        $("#myProjects").show();
-    });
-});     
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+        /*DRAGGABLE*/
+            $(function() {
+                $( "#aboutMe, #contact, #myProjects, #game" ).draggable();
+              } );
 
-
-  </script>
-        
+            /*CLOSE/OPEN*/     
+            $(document).ready(function(){
+                $(".hide,.buttonSmall").click(function(){
+                    $("#aboutMe, #contact, #myProjects, #game").hide();
+                });
+                $("#show").click(function(){
+                    $("#myProjects").show();
+                });
+            }); 
+        </script>
+        </div>        
 	</body>
 </html>
