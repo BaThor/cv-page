@@ -16,19 +16,10 @@ foodImg.src = "img/food.png";
 
 // audio
 
-let dead = new Audio();
 let eat = new Audio();
-let up = new Audio();
-let right = new Audio();
-let left = new Audio();
-let down = new Audio();
 
-dead.src = "audio/hastalavista.mp3";
 eat.src = "audio/chomp.mp3";
-up.src = "audio/up.mp3";
-right.src = "audio/right.mp3";
-left.src = "audio/left.mp3";
-down.src = "audio/down.mp3";
+
 
 // kobra tworzenie
 
@@ -59,16 +50,12 @@ document.addEventListener("keydown",direction);
 function direction(event){
     let key = event.keyCode;
     if( key == 37 && d != "RIGHT"){
-        left.play();
         d = "LEFT";
-    }else if(key == 38 && d != "DOWN"){
-        up.play();        
+    }else if(key == 38 && d != "DOWN"){        
         d = "UP";
-    }else if(key == 39 && d != "LEFT"){
-        right.play();        
+    }else if(key == 39 && d != "LEFT"){        
         d = "RIGHT";
-    }else if(key == 40 && d != "UP"){
-        down.play();        
+    }else if(key == 40 && d != "UP"){                
         d = "DOWN";
     }
 }
@@ -134,7 +121,6 @@ function draw(){
     
     if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
         location.reload();
-        dead.play();
     }
     
     snake.unshift(newHead);
